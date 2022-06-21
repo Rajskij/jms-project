@@ -20,10 +20,14 @@ public class Consumer {
     @Autowired
     private OrderProcessingService orderProcessingService;
 
-    @JmsListener(destination = "order.queue")
-    public void receiveMessage(Order order){
+    @JmsListener(destination = "order.topic", selector = "(ItemNumber > 0) OR (LiquidVolume > 0)")
+    public void receiveItemMessage(Order order){
         OrderState orderState = validate(order);
-        LOGGER.info("Received message: {}", order);
+        LOGGER.info("Received order from: {}, items: {} pieces, liquid: {} liters",
+                order.getCustomer().getFullName(),
+                order.getItem().getItemNumber(),
+                order.getLiquid().getVolume());
+
         orderProcessingService.processOrder(order, orderState);
     }
 

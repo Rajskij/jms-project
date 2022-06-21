@@ -8,32 +8,23 @@ import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFac
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.annotation.JmsListenerConfigurer;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
-import org.springframework.jms.config.JmsListenerEndpointRegistrar;
-import org.springframework.jms.config.SimpleJmsListenerEndpoint;
 import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.connection.JmsTransactionManager;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.support.converter.MappingJackson2MessageConverter;
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
-import org.springframework.messaging.handler.annotation.support.DefaultMessageHandlerMethodFactory;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.validation.Validator;
-import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import javax.jms.ConnectionFactory;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @EnableJms
-@EnableTransactionManagement
 @Configuration
-public class JmsConfig/* implements JmsListenerConfigurer*/ {
+@EnableTransactionManagement
+public class JmsConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(JmsConfig.class);
 
     public static final String PROCESSED_QUEUE = "order.processed.queue";
@@ -48,22 +39,6 @@ public class JmsConfig/* implements JmsListenerConfigurer*/ {
 
     @Value("${spring.activemq.password}")
     private String password;
-
-//    @Override
-//    public void configureJmsListeners(JmsListenerEndpointRegistrar registrar) {
-//        List<String> queueList = Arrays.asList(PROCESSED_QUEUE, CANCELED_QUEUE);
-//        int i = 0;
-//        for (String queue : queueList) {
-//            SimpleJmsListenerEndpoint endpoint = new SimpleJmsListenerEndpoint();
-//            endpoint.setId("myJmsEndpoint-" + i++);
-//            endpoint.setDestination(queue);
-//            endpoint.setMessageListener(message -> {
-//                LOGGER.debug("***********************************************receivedMessage:" + message);
-//            });
-//            registrar.registerEndpoint(endpoint);
-//            LOGGER.debug("registered the endpoint for queue" + queue);
-//        }
-//    }
 
     @Bean
     public CachingConnectionFactory connectionFactory() {
@@ -92,25 +67,12 @@ public class JmsConfig/* implements JmsListenerConfigurer*/ {
         factory.setConnectionFactory(connectionFactory());
         factory.setMessageConverter(jacksonJmsMessageConverter());
         factory.setTransactionManager(jmsTransactionManager());
+        factory.setPubSubDomain(true);
         factory.setErrorHandler(t -> {
             LOGGER.info("Handling error in listening for messages, error: " + t.getMessage());
         });
         return factory;
     }
-
-//    @Bean
-//    public DefaultMessageHandlerMethodFactory methodFactory() {
-//        DefaultMessageHandlerMethodFactory factory = new DefaultMessageHandlerMethodFactory();
-//        factory.setValidator(validatorFactory());
-//        return factory;
-//    }
-//
-//    @Bean
-//    public Validator validatorFactory(){
-//        LocalValidatorFactoryBean factory = new LocalValidatorFactoryBean();
-//        factory.setProviderClass(new OrderValidator());
-//        return factory;
-//    }
 
     /**
      * Another factory for learning purpose
@@ -125,12 +87,22 @@ public class JmsConfig/* implements JmsListenerConfigurer*/ {
     }
 
     @Bean
-    public JmsTemplate jmsTemplate(){
+    public JmsTemplate jmsTemplate() {
+        JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory());
+        jmsTemplate.setMessageConverter(jacksonJmsMessageConverter());
+        jmsTemplate.setDeliveryPersistent(true);
+        jmsTemplate.setSessionTransacted(true);
+        jmsTemplate.setPubSubDomain(true);
+        return jmsTemplate;
+    }
+
+
+    @Bean
+    public JmsTemplate jmsWriterTemplate() {
         JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory());
         jmsTemplate.setMessageConverter(jacksonJmsMessageConverter());
         jmsTemplate.setDeliveryPersistent(true);
         jmsTemplate.setSessionTransacted(true);
         return jmsTemplate;
     }
-
 }

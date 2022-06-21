@@ -19,8 +19,12 @@ public class Producer {
     JmsTemplate jmsTemplate;
 
     public void sendMessage(String destination, Order order){
-        LOGGER.info("Send message: {}", order);
-        jmsTemplate.convertAndSend(destination, order/*, new MessagePostProcessor() {
+        LOGGER.info("Send order from customer: {}, items: {} pieces, liquids: {} liters",
+                order.getCustomer().getFullName(),
+                order.getItem().getItemNumber(),
+                order.getLiquid().getVolume());
+
+        jmsTemplate.convertAndSend(destination, order, new MessagePostProcessor() {
             @Override
             public Message postProcessMessage(Message message) throws JMSException {
                 message.setStringProperty("orderId", order.getOrderId());
@@ -29,7 +33,7 @@ public class Producer {
                 message.setIntProperty("LiquidVolume", order.getLiquid().getVolume());
                 return message;
             }
-        }*/);
+        });
     }
 
 }

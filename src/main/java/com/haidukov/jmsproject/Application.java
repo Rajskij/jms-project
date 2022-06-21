@@ -21,14 +21,15 @@ public class Application {
         Producer producer = context.getBean(Producer.class);
 
         try {
-            producer.sendMessage("order.queue", buildOrderAccept());
-            producer.sendMessage("order.queue", buildOrderCanceled());
+            producer.sendMessage("order.topic", buildAcceptedOrder());
+            producer.sendMessage("order.topic", buildCanceledOrder());
+            producer.sendMessage("order.topic", buildEmptyOrder());
         } catch (Exception exception) {
             System.out.println("Error occurred!" + exception.getLocalizedMessage());
         }
     }
 
-    private static Order buildOrderAccept() {
+    private static Order buildAcceptedOrder() {
         Liquid liquid = new Liquid(uuid(), 7);
         Item item = new Item(uuid(), 3);
         Customer customer = new Customer(uuid(), "First Customer");
@@ -36,10 +37,18 @@ public class Application {
         return new Order(uuid(), item, liquid, customer);
     }
 
-    private static Order buildOrderCanceled() {
-        Liquid liquid = new Liquid(uuid(), 1_000_000);
+    private static Order buildCanceledOrder() {
+        Liquid liquid = new Liquid(uuid(), 100_000);
         Item item = new Item(uuid(), 3);
         Customer customer = new Customer(uuid(), "Second Customer");
+
+        return new Order(uuid(), item, liquid, customer);
+    }
+
+    private static Order buildEmptyOrder() {
+        Liquid liquid = new Liquid(uuid(), 0);
+        Item item = new Item(uuid(), 0);
+        Customer customer = new Customer(uuid(), "Third Customer");
 
         return new Order(uuid(), item, liquid, customer);
     }

@@ -18,14 +18,16 @@ public class OrderProcessingService {
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderProcessingService.class);
 
     @Autowired
-    JmsTemplate jmsTemplate;
+    JmsTemplate jmsWriterTemplate;
 
     @Transactional
     public void processOrder(Order order, OrderState state) {
         if (ACCEPTED.equals(state)) {
-            jmsTemplate.convertAndSend(PROCESSED_QUEUE, order);
+            LOGGER.info("Process order sent");
+            jmsWriterTemplate.convertAndSend(PROCESSED_QUEUE, order);
         } else {
-            jmsTemplate.convertAndSend(CANCELED_QUEUE, order);
+            LOGGER.info("Canceled order sent");
+            jmsWriterTemplate.convertAndSend(CANCELED_QUEUE, order);
         }
     }
 

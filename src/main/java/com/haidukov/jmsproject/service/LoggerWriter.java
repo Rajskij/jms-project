@@ -15,11 +15,11 @@ public class LoggerWriter {
 
     @JmsListener(destination = PROCESSED_QUEUE)
     public void receiveLogsProcessed(Order order) {
-        LOGGER.info("Received LOGG message: {}", order);
+        LOGGER.info("Received order from: {}", order.getCustomer().getFullName());
     }
 
     @JmsListener(destination = CANCELED_QUEUE)
     public void receiveLogsCanceled(Order order) {
-        LOGGER.info("Received LOGG message: {}", order);
+        LOGGER.info("Canceled order from: {}", order.getCustomer().getFullName());
     }
 }
