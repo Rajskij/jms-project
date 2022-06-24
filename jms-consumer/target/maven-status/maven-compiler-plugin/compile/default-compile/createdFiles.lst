@@ -1,0 +1,4 @@
+com\haidukov\consumer\config\JmsConfig.class
+com\haidukov\consumer\service\OrderProcessingService.class
+com\haidukov\consumer\ConsumerApplication.class
+com\haidukov\consumer\service\Consumer.class
