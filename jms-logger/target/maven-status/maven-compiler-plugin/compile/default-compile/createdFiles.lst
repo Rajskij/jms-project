@@ -1,0 +1,3 @@
+com\haidukov\logger\LoggerApplication.class
+com\haidukov\logger\config\JmsConfig.class
+com\haidukov\logger\service\LoggerWriter.class

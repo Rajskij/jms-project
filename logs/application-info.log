@@ -1,0 +1,49 @@
+2022-06-24 20:56:51,017 INFO  [main] com.haidukov.producer.ProducerApplication : Starting ProducerApplication using Java 11.0.14.1 on EPUAFRAL0001 with PID 4772 (C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer\target\classes started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project)
+2022-06-24 20:56:51,019 INFO  [main] com.haidukov.producer.ProducerApplication : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:56:52,242 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8082 (http)
+2022-06-24 20:56:52,262 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-06-24 20:56:52,262 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 20:56:52,355 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2022-06-24 20:56:52,356 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1282 ms
+2022-06-24 20:56:52,815 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8082 (http) with context path ''
+2022-06-24 20:56:52,827 INFO  [main] com.haidukov.producer.ProducerApplication : Started ProducerApplication in 2.277 seconds (JVM running for 2.638)
+2022-06-24 20:56:52,832 INFO  [main] com.haidukov.producer.service.Producer : Send order from customer: First Customer, items: 3 pieces, liquids: 7 liters
+2022-06-24 20:56:53,081 INFO  [main] com.haidukov.producer.service.Producer : Send order from customer: Second Customer, items: 3 pieces, liquids: 100000 liters
+2022-06-24 20:56:53,123 INFO  [main] com.haidukov.producer.service.Producer : Send order from customer: Third Customer, items: 0 pieces, liquids: 0 liters
+2022-06-24 20:57:25,223 INFO  [main] com.haidukov.logger.LoggerApplication : Starting LoggerApplication using Java 11.0.14.1 on EPUAFRAL0001 with PID 13204 (C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-logger\target\classes started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project)
+2022-06-24 20:57:25,226 INFO  [main] com.haidukov.logger.LoggerApplication : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:57:26,265 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8082 (http)
+2022-06-24 20:57:26,276 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-06-24 20:57:26,276 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 20:57:26,353 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2022-06-24 20:57:26,353 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2022-06-24 20:57:26,748 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8082 is already in use
+2022-06-24 20:57:26,754 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2022-06-24 20:57:26,763 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-24 20:57:26,779 ERROR [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2022-06-24 20:57:44,391 INFO  [main] com.haidukov.logger.LoggerApplication : Starting LoggerApplication using Java 11.0.14.1 on EPUAFRAL0001 with PID 1436 (C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-logger\target\classes started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project)
+2022-06-24 20:57:44,393 INFO  [main] com.haidukov.logger.LoggerApplication : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:57:45,330 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8082 (http)
+2022-06-24 20:57:45,338 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2022-06-24 20:57:45,339 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 20:57:45,410 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2022-06-24 20:57:45,410 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 971 ms
+2022-06-24 20:57:45,800 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8082 (http) with context path ''
+2022-06-24 20:57:45,810 INFO  [main] com.haidukov.logger.LoggerApplication : Started LoggerApplication in 1.85 seconds (JVM running for 2.19)
+2022-06-24 20:57:46,085 INFO  [org.springframework.jms.JmsListenerEndpointContainer#0-1] com.haidukov.logger.service.LoggerWriter : Received order from: First Customer
+2022-06-24 20:57:46,099 INFO  [org.springframework.jms.JmsListenerEndpointContainer#1-1] com.haidukov.logger.service.LoggerWriter : Canceled order from: Second Customer

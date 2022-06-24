@@ -1,0 +1,5 @@
+com\haidukov\pojo\Customer.class
+com\haidukov\pojo\Item.class
+com\haidukov\pojo\Liquid.class
+com\haidukov\pojo\Order.class
+com\haidukov\pojo\OrderState.class
