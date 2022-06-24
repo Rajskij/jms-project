@@ -1,0 +1,27 @@
+2022-06-24 20:38:52,554 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting JmsProjectApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 632 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:38:52,556 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:38:53,873 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started JmsProjectApplicationTests in 1.611 seconds (JVM running for 2.407)
+2022-06-24 20:39:27,448 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting JmsProjectApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 10784 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:39:27,449 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:39:28,732 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started JmsProjectApplicationTests in 1.562 seconds (JVM running for 2.258)
+2022-06-24 20:39:40,749 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting JmsProjectApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 6576 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:39:40,752 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:39:42,641 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started JmsProjectApplicationTests in 2.208 seconds (JVM running for 2.977)
+2022-06-24 20:40:19,130 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting JmsProjectApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 16892 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:40:19,134 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:40:21,118 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started JmsProjectApplicationTests in 2.45 seconds (JVM running for 3.565)
+2022-06-24 20:43:45,710 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting ProducerApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 17296 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:43:45,711 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:43:47,024 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started ProducerApplicationTests in 1.607 seconds (JVM running for 2.287)
+2022-06-24 20:47:33,272 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting ProducerApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 16136 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:47:33,274 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:47:34,639 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started ProducerApplicationTests in 1.687 seconds (JVM running for 2.434)
+2022-06-24 20:50:29,622 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting ProducerApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 7188 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:50:29,624 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:50:30,920 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started ProducerApplicationTests in 1.602 seconds (JVM running for 2.286)
+2022-06-24 20:54:30,346 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting ProducerApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 9656 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:54:30,350 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:54:32,229 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started ProducerApplicationTests in 2.331 seconds (JVM running for 3.222)
+2022-06-24 20:55:28,462 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Starting ProducerApplicationTests using Java 11.0.14.1 on EPUAFRAL0001 with PID 6680 (started by Ihor_Haidukov in C:\Users\Ihor_Haidukov\Desktop\EPAM_learn\6. JMS\JMS main\jms-project\jms-producer)
+2022-06-24 20:55:28,464 INFO  [main] com.haidukov.producer.ProducerApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 20:55:29,783 INFO  [main] com.haidukov.producer.ProducerApplicationTests : Started ProducerApplicationTests in 1.644 seconds (JVM running for 2.331)
