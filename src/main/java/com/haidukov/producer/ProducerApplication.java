@@ -1,23 +1,23 @@
-package com.haidukov.jmsproject;
+package com.haidukov.producer;
 
-import com.haidukov.jmsproject.pojo.Customer;
-import com.haidukov.jmsproject.pojo.Item;
-import com.haidukov.jmsproject.pojo.Liquid;
-import com.haidukov.jmsproject.pojo.Order;
-import com.haidukov.jmsproject.service.Producer;
+import com.haidukov.producer.service.Producer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.jms.annotation.EnableJms;
+import pojo.Customer;
+import pojo.Item;
+import pojo.Liquid;
+import pojo.Order;
 
 import java.util.UUID;
 
 @EnableJms
 @SpringBootApplication
-public class Application {
+public class ProducerApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(ProducerApplication.class, args);
         Producer producer = context.getBean(Producer.class);
 
         try {

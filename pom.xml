@@ -9,15 +9,18 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.haidukov</groupId>
-    <artifactId>jms-project</artifactId>
+    <artifactId>jms-producer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jms-project</name>
-    <description>jms-project</description>
+    <name>jms-producer</name>
+    <description>jms-producer</description>
+    <packaging>jar</packaging>
+
     <properties>
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -61,9 +64,9 @@
             <artifactId>activemq-pool</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
+            <groupId>com.haidukov</groupId>
+            <artifactId>pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
